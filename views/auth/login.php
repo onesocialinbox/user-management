@@ -45,7 +45,7 @@ use yii\helpers\Html;
 						<div class="col-sm-6">
 							<?= GhostHtml::a(
 								UserManagementModule::t('front', "Registration"),
-								['/user-management/auth/registration']
+								['/enrollment-master/create']
 							) ?>
 						</div>
 						<div class="col-sm-6 text-right">
