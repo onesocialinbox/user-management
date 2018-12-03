@@ -48,6 +48,10 @@ use yii\helpers\Html;
 								['/enrollment-master/create']
 							) ?>
 						</div>
+						<div class="col-sm-4 col-xs-11 text-center">
+						      <?= GhostHtml::a(UserManagementModule::t('front', "Verify Otp"), 
+						['/user/userotpverification']) ?>
+						</div>
 						<div class="col-sm-6 text-right">
 							<?= GhostHtml::a(
 								UserManagementModule::t('front', "Forgot password ?"),

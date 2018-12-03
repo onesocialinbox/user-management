@@ -5,12 +5,13 @@ use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 use yii\helpers\Html;
 
+
 /**
  * @var yii\web\View $this
  * @var webvimark\modules\UserManagement\models\forms\PasswordRecoveryForm $model
  */
 
-$this->title = UserManagementModule::t('front', 'Password recovery');
+// $this->title = UserManagementModule::t('front', 'Password recovery');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -23,28 +24,35 @@ $this->params['breadcrumbs'][] = $this->title;
 			<?= Yii::$app->session->getFlash('error') ?>
 		</div>
 	<?php endif; ?>
+	
 
 	<?php $form = ActiveForm::begin([
 		'id'=>'user',
 		'layout'=>'horizontal',
 		'validateOnBlur'=>false,
 	]); ?>
+	<div class="card-body">
+		<div class="col-md-12 mb-2">   
+					<h1>Password Recovery</h1><br/>
+		</div>   
 
-	<?= $form->field($model, 'email')->textInput(['maxlength' => 255, 'autofocus'=>true]) ?>
-
-	<?= $form->field($model, 'captcha')->widget(Captcha::className(), [
-		'template' => '<div class="row"><div class="col-sm-2">{image}</div><div class="col-sm-3">{input}</div></div>',
-		'captchaAction'=>['/user-management/auth/captcha']
-	]) ?>
-
-	<div class="form-group">
-		<div class="col-sm-offset-3 col-sm-9">
-			<?= Html::submitButton(
+	<div class="col-md-8 mb-2">   
+		<?= $form->field($model, 'email')->textInput(['maxlength' => 255, 'autofocus'=>true]) ?>
+	</div>
+	<div class="col-md-8 mb-2"> 
+		<?= $form->field($model, 'captcha')->widget(Captcha::className(), [
+			'template' => '<div class="row"><div class="col-sm-6">{image}</div><div class="col-sm-6">{input}</div></div>',
+			'captchaAction'=>['/user-management/auth/captcha']
+		]) ?>
+	</div>
+</div>
+<div class="col-md-8 mb-2" > 
+<?= Html::submitButton(
 				'<span class="glyphicon glyphicon-ok"></span> ' . UserManagementModule::t('front', 'Recover'),
 				['class' => 'btn btn-primary']
 			) ?>
-		</div>
-	</div>
+</div>
+
 
 	<?php ActiveForm::end(); ?>
 
