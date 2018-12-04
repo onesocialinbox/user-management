@@ -12,7 +12,7 @@ use yii\helpers\Html;
 
 <div class="container" id="login-wrapper">
 	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
+		<div class="col-md-5 col-md-offset-4">
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title"><?= UserManagementModule::t('front', 'Login') ?></h3>
@@ -42,17 +42,17 @@ use yii\helpers\Html;
 					) ?>
 
 					<div class="row registration-block">
-						<div class="col-sm-6">
+						<div class="col-sm-4 col-xs-4 ">
 							<?= GhostHtml::a(
 								UserManagementModule::t('front', "Enroll User"),
 								['/enrollment-master/create']
 							) ?>
 						</div>
-						<div class="col-sm-4 col-xs-11 text-center">
+						<div class="col-sm-4 col-xs-4 text-center">
 						      <?= GhostHtml::a(UserManagementModule::t('front', "Verify Otp"), 
 						['/user/userotpverification']) ?>
 						</div>
-						<div class="col-sm-6 text-right">
+						<div class="col-sm-4 col-xs-4  text-right">
 							<?= GhostHtml::a(
 								UserManagementModule::t('front', "Forgot password ?"),
 								['/user-management/auth/password-recovery']
