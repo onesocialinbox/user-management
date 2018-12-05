@@ -8,6 +8,8 @@ use webvimark\modules\UserManagement\components\GhostHtml;
 use webvimark\modules\UserManagement\UserManagementModule;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
+use yii\helpers\Url;
+
 ?>
 
 <div class="container" id="login-wrapper">
@@ -57,6 +59,28 @@ use yii\helpers\Html;
 								UserManagementModule::t('front', "Forgot password ?"),
 								['/user-management/auth/password-recovery']
 							) ?>
+						</div>
+					</div>
+					<div class="row registration-block">
+						<div class="col-sm-4 col-xs-4 ">
+						<?= 
+						
+						Html::a('Existing Files', Url::to('@web/ExistingFiles.pdf'),['target'=>'_blank'])
+					  ?>
+
+						</div>
+						<div class="col-sm-4 col-xs-4 text-center">
+						<?= 
+						
+						  Html::a('Rules', Url::to('@web/Rules.pdf'),['target'=>'_blank'])
+						  
+						?>
+
+						</div>
+						<div class="col-sm-4 col-xs-4  text-right">
+							<?=  Html::mailto('Contact us', 'admin@example.com')?>
+									
+								
 						</div>
 					</div>
 
