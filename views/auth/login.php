@@ -12,16 +12,29 @@ use yii\helpers\Url;
 
 ?>
 
-<div class="container" id="login-wrapper">
-	<div class="row">
-		<div class="col-md-5 col-md-offset-4">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h3 class="panel-title"><?= UserManagementModule::t('front', 'Login') ?></h3>
+<div class="container-fluid" id="login-wrapper">
+		<div class="row">
+			<div class="col-md-5 col-sm-5 left-container">
+				<div class="content-center">
+				<h2 class="app-title">Lawfirm</h2>
+				<h3 class="sub-head-title">Why our service ?</h3>
+				<ul class="service-points">
+					<li>Some important points for the application</li>
+					<li>Some important points for the application</li>
+					<li>Some important points for the application</li>
+				</ul>
+				<div class="btn-center">
+					<?= GhostHtml::a(
+								UserManagementModule::t('front', "Enroll"),
+								['/enrollment-master/create'],["class"=>"btn btn-lg btn-secondary  margin-top-bottom"]
+							) ?>
 				</div>
-				<div class="panel-body">
-
-					<?php $form = ActiveForm::begin([
+				
+				</div>
+			</div>
+			<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1 margin-top-header">
+				<h3 class="heading"><?= UserManagementModule::t('front', 'Login') ?></h3>
+				<?php $form = ActiveForm::begin([
 						'id'      => 'login-form',
 						'options'=>['autocomplete'=>'off'],
 						'validateOnBlur'=>false,
@@ -29,89 +42,49 @@ use yii\helpers\Url;
 							'template'=>"{input}\n{error}",
 						],
 					]) ?>
-
-					<?= $form->field($model, 'username')
+					<div class="form-group field-loginform-username required">
+						<label class="control-label" for="loginform-username">E-mail / Login ID</label>
+						<?= $form->field($model, 'username')
 						->textInput(['placeholder'=>$model->getAttributeLabel('username'), 'autocomplete'=>'off']) ?>
 
-					<?= $form->field($model, 'password')
+					</div>
+					<div class="form-group field-loginform-password required">
+						<label class="control-label" for="loginform-password">Password</label>
+						<?= $form->field($model, 'password')
 						->passwordInput(['placeholder'=>$model->getAttributeLabel('password'), 'autocomplete'=>'off']) ?>
-
-					<?= (isset(Yii::$app->user->enableAutoLogin) && Yii::$app->user->enableAutoLogin) ? $form->field($model, 'rememberMe')->checkbox(['value'=>true]) : '' ?>
-
+					</div>
 					<?= Html::submitButton(
 						UserManagementModule::t('front', 'Login'),
-						['class' => 'btn btn-lg btn-primary btn-block']
+						['class' => 'btn btn-lg btn-primary pull-right margin-top-bottom']
 					) ?>
-
-					<div class="row registration-block">
-						<div class="col-sm-4 col-xs-4 ">
-							<?= GhostHtml::a(
-								UserManagementModule::t('front', "Enroll User"),
-								['/enrollment-master/create']
-							) ?>
-						</div>
-						<div class="col-sm-4 col-xs-4 text-center">
-						      <?= GhostHtml::a(UserManagementModule::t('front', "Verify Otp"), 
-						['/user/userotpverification']) ?>
-						</div>
-						<div class="col-sm-4 col-xs-4  text-right">
-							<?= GhostHtml::a(
+					<?= GhostHtml::a(
 								UserManagementModule::t('front', "Forgot password ?"),
-								['/user-management/auth/password-recovery']
+								['/user-management/auth/password-recovery'],['class'=>'forgot-pwd']
 							) ?>
-						</div>
-					</div>
-					<div class="row registration-block">
-						<div class="col-sm-4 col-xs-4 ">
-						<?= 
+					<div class="clear"></div>
+					<?php ActiveForm::end() ?>
+					<div class="login-footer">	
+						<ul class="recovery-links">
+							<li> <?= GhostHtml::a(UserManagementModule::t('front', "Verify Otp"), 
+						['/user/userotpverification']) ?></li>
+							<li> <?= 
 						
 						Html::a('Existing Files', Url::to('@web/ExistingFiles.pdf'),['target'=>'_blank'])
-					  ?>
-
-						</div>
-						<div class="col-sm-4 col-xs-4 text-center">
-						<?= 
+					  ?></li>
+							<li> <?= 
 						
 						  Html::a('Rules', Url::to('@web/Rules.pdf'),['target'=>'_blank'])
 						  
-						?>
-
-						</div>
-						<div class="col-sm-4 col-xs-4  text-right">
-							<?=  Html::mailto('Contact us', 'admin@example.com')?>
-									
-								
-						</div>
+						?></li>
+							<li> <?=  Html::mailto('Contact us', 'admin@example.com')?></li>
+											
+						</ul>
 					</div>
-
-
-
-
-					<?php ActiveForm::end() ?>
-				</div>
 			</div>
 		</div>
-	</div>
 </div>
 
 <?php
-$css = <<<CSS
-html, body {
-	background: #eee;
-	-webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-	box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-	height: 100%;
-	min-height: 100%;
-	position: relative;
-}
-#login-wrapper {
-	position: relative;
-	top: 30%;
-}
-#login-wrapper .registration-block {
-	margin-top: 15px;
-}
-CSS;
 
-$this->registerCss($css);
+$this->registerCssFile('css/loginstyles.css');
 ?>
