@@ -25,7 +25,7 @@ use yii\helpers\Url;
 				</ul>
 				<div class="btn-center">
 					<?= GhostHtml::a(
-								UserManagementModule::t('front', "Enroll"),
+								UserManagementModule::t('front', "New User"),
 								['/enrollment-master/create'],["class"=>"btn btn-lg btn-secondary  margin-top-bottom"]
 							) ?>
 				</div>
