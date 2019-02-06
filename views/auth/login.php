@@ -16,13 +16,8 @@ use yii\helpers\Url;
 		<div class="row">
 			<div class="col-md-5 col-sm-5 left-container">
 				<div class="content-center">
-				<h2 class="app-title">Lawfirm</h2>
-				<h3 class="sub-head-title">Why our service ?</h3>
-				<ul class="service-points">
-					<li>Some important points for the application</li>
-					<li>Some important points for the application</li>
-					<li>Some important points for the application</li>
-				</ul>
+				<h2 class="app-title">BAR COUNCIL OF TAMILNADU & PUDUCHERRY</h2>
+				
 				<div class="btn-center">
 					<?= GhostHtml::a(
 								UserManagementModule::t('front', "New User"),
