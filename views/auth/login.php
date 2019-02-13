@@ -16,6 +16,7 @@ use yii\helpers\Url;
 		<div class="row">
 			<div class="col-md-5 col-sm-5 left-container">
 				<div class="content-center">
+				<img src="img/logo.png" class="img-responsive" style="width: 50%;margin: auto;">
 				<h2 class="app-title">BAR COUNCIL OF TAMILNADU & PUDUCHERRY</h2>
 				
 				<div class="btn-center">
