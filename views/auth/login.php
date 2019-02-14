@@ -72,7 +72,7 @@ use yii\helpers\Url;
 						  Html::a('Rules', Url::to('@web/Rules.pdf'),['target'=>'_blank'])
 						  
 						?></li>
-							<li> <?=  Html::mailto('Contact us', 'admin@example.com')?></li>
+							<li><?=Html::a('Contact Us', Url::to('@web/contact.txt'),['target'=>'_blank'])?></li>
 											
 						</ul>
 					</div>
