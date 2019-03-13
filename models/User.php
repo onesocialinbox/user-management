@@ -254,6 +254,7 @@ class User extends UserIdentity
 
 			[['status', 'email_confirmed'], 'integer'],
 
+			['email','required'],
 			['email', 'email'],
 			['email', 'validateEmailConfirmedUnique'],
 
