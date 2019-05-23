@@ -65,7 +65,7 @@ use yii\helpers\Url;
 						['/user/userotpverification']) ?></li>
 							<li> <?= 
 						
-						Html::a('Login Instructions', Url::to('@web/instructions.docx'),['target'=>'_blank'])
+						Html::a('Login Instructions', Url::to('@web/instructions.pdf'),['target'=>'_blank'])
 					  ?></li>
 							<li> <?= 
 						
