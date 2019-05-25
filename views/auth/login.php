@@ -28,7 +28,7 @@ use yii\helpers\Url;
 				
 				</div>
 			</div>
-			<h2 class="heading">Online Enrollment Form</h2>
+			<h2 class="heading"><center>Online Enrollment Form</center></h2>
 			<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1 margin-top-header">
 				<h3 class="heading"><?= UserManagementModule::t('front', 'Login') ?></h3>
 				<?php $form = ActiveForm::begin([
