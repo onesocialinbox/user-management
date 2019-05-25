@@ -62,13 +62,13 @@ use yii\helpers\Url;
 					<?php ActiveForm::end() ?>
 					<div class="login-footer">	 
 						<ul class="recovery-links">
-							<li><h2> <?= GhostHtml::a(UserManagementModule::t('front', "Verify Otp"), ['/user/userotpverification']) ?></h2></li>
+							<li><?= GhostHtml::a(UserManagementModule::t('front', "Verify Otp"), ['/user/userotpverification']) ?></li>
 
-							<li><h2> <?= Html::a('Login Instructions', Url::to('@web/instructions.pdf'),['target'=>'_blank']) ?></h2></li>
+							<li> <?= Html::a('Login Instructions', Url::to('@web/instructions.pdf'),['target'=>'_blank']) ?></li>
 
-							<li><h2> <?= Html::a('Rules', Url::to('@web/Rules.pdf'),['target'=>'_blank'])?></h2></li>
+							<li><?= Html::a('Rules', Url::to('@web/Rules.pdf'),['target'=>'_blank'])?></li>
 
-							<li><h2> <?=Html::a('Contact Us', Url::to('@web/contact.txt'),['target'=>'_blank'])?></h2></li>
+							<li> <?=Html::a('Contact Us', Url::to('@web/contact.txt'),['target'=>'_blank'])?></li>
 												
 						</ul>
 					</div>
