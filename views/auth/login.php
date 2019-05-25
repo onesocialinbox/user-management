@@ -21,12 +21,15 @@ use yii\helpers\Url;
 				
 				<div class="btn-center">
 					<?= GhostHtml::a(
-								UserManagementModule::t('front', "New User"),
+								UserManagementModule::t('front', "User Registration"),
 								['/enrollment-master/create'],["class"=>"btn btn-lg btn-secondary  margin-top-bottom"]
 							) ?>
 				</div>
 				
 				</div>
+			</div>
+			<div class="content-center">
+			<h2 class="app-title">Online Enrollment Form</h2>
 			</div>
 			<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1 margin-top-header">
 				<h3 class="heading"><?= UserManagementModule::t('front', 'Login') ?></h3>
