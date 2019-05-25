@@ -28,7 +28,7 @@ use yii\helpers\Url;
 				
 				</div>
 			</div>
-			<h2 class="app-title">Online Enrollment Form</h2>
+			<h2 class="heading">Online Enrollment Form</h2>
 			<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1 margin-top-header">
 				<h3 class="heading"><?= UserManagementModule::t('front', 'Login') ?></h3>
 				<?php $form = ActiveForm::begin([
@@ -60,7 +60,7 @@ use yii\helpers\Url;
 							) ?>
 					<div class="clear"></div>
 					<?php ActiveForm::end() ?>
-					<!-- <div class="login-footer">	 -->
+					<div class="login-footer">	 
 						<ul class="recovery-links">
 							<li> <?= GhostHtml::a(UserManagementModule::t('front', "Verify Otp"), 
 						['/user/userotpverification']) ?></li>
@@ -76,7 +76,7 @@ use yii\helpers\Url;
 							<li><?=Html::a('Contact Us', Url::to('@web/contact.txt'),['target'=>'_blank'])?></li>
 											
 						</ul>
-					<!-- </div> -->
+					</div>
 			</div>
 		</div>
 </div>
