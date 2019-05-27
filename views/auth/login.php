@@ -61,10 +61,10 @@ use yii\helpers\Url;
 								UserManagementModule::t('front', 'Forgot password ?'),
 								['/user-management/auth/password-recovery'],['class'=>'forgot-pwd']
 							) ?>
-							
+							3
 					<?= GhostHtml::a(
 						UserManagementModule::t('front', 'User Registration'),
-						['/enrollment-master/create'],['class'=>'btn btn-lg btn-primary ']
+						['/enrollment-master/create'],['class'=>'btn btn-lg btn-primary pull-left margin-top-bottom']
 					) ?>
 
 					<div class="clear"></div>
