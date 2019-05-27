@@ -56,14 +56,16 @@ use yii\helpers\Url;
 						UserManagementModule::t('front', 'Login'),
 						['class' => 'btn btn-lg btn-primary pull-right margin-top-bottom']
 					) ?>
-					<?= GhostHtml::a(
-								UserManagementModule::t('front', 'User Registration'),
-								['/enrollment-master/create'],['class'=>'btn btn-lg btn-primary ']
-							) ?>
+					
 					<?= GhostHtml::a(
 								UserManagementModule::t('front', 'Forgot password ?'),
 								['/user-management/auth/password-recovery'],['class'=>'forgot-pwd']
 							) ?>
+							
+					<?= GhostHtml::a(
+						UserManagementModule::t('front', 'User Registration'),
+						['/enrollment-master/create'],['class'=>'btn btn-lg btn-primary ']
+					) ?>
 
 					<div class="clear"></div>
 					<?php ActiveForm::end() ?>
