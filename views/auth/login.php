@@ -68,7 +68,7 @@ use yii\helpers\Url;
 
 							<li><?= Html::a('Rules', Url::to('@web/Rules.pdf'),['target'=>'_blank'])?></li>
 
-							<li> <?=Html::a('Contact Us', Url::to('@web/contact.txt'),['target'=>'_blank'])?></li>
+							<li> <?=Html::a('Contact Us', Url::to('@web/contacts.pdf'),['target'=>'_blank'])?></li>
 												
 						</ul>
 					</div>
