@@ -51,14 +51,15 @@ use yii\helpers\Url;
 						<?= $form->field($model, 'password')
 						->passwordInput(['placeholder'=>$model->getAttributeLabel('password'), 'autocomplete'=>'off']) ?>
 					</div>
-					<?= GhostHtml::a(
-								UserManagementModule::t('front', 'User Registration'),
-								['/enrollment-master/create'],['class'=>'btn btn-lg btn-primary ']
-							) ?>
+					
 					<?= Html::submitButton(
 						UserManagementModule::t('front', 'Login'),
 						['class' => 'btn btn-lg btn-primary pull-right margin-top-bottom']
 					) ?>
+					<?= GhostHtml::a(
+								UserManagementModule::t('front', 'User Registration'),
+								['/enrollment-master/create'],['class'=>'btn btn-lg btn-primary ']
+							) ?>
 					<?= GhostHtml::a(
 								UserManagementModule::t('front', 'Forgot password ?'),
 								['/user-management/auth/password-recovery'],['class'=>'forgot-pwd']
