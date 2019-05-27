@@ -28,7 +28,8 @@ use yii\helpers\Url;
 				
 				</div>
 			</div>
-			<h2 class="heading"><center>Online Enrollment Form</center></h2>
+			<h2 class="heading"><center>Online Enrollment Form</center></h2></center></h2>
+			<h2 class="heading"><center><?=Html::a('Contact Us', Url::to('@web/contacts.pdf'),['target'=>'_blank'])?>
 			<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1 margin-top-header">
 				<h3 class="heading"><?= UserManagementModule::t('front', 'Login') ?></h3>
 				<?php $form = ActiveForm::begin([
@@ -50,6 +51,10 @@ use yii\helpers\Url;
 						<?= $form->field($model, 'password')
 						->passwordInput(['placeholder'=>$model->getAttributeLabel('password'), 'autocomplete'=>'off']) ?>
 					</div>
+					<?= GhostHtml::a(
+								UserManagementModule::t('front', "User Registration"),
+								['/enrollment-master/create'],["class"=>"btn btn-lg btn-secondary  margin-top-bottom"]
+							) ?>
 					<?= Html::submitButton(
 						UserManagementModule::t('front', 'Login'),
 						['class' => 'btn btn-lg btn-primary pull-right margin-top-bottom']
@@ -58,6 +63,7 @@ use yii\helpers\Url;
 								UserManagementModule::t('front', "Forgot password ?"),
 								['/user-management/auth/password-recovery'],['class'=>'forgot-pwd']
 							) ?>
+
 					<div class="clear"></div>
 					<?php ActiveForm::end() ?>
 					<div class="login-footer">	 
@@ -68,7 +74,7 @@ use yii\helpers\Url;
 
 							<li><?= Html::a('Rules', Url::to('@web/Rules.pdf'),['target'=>'_blank'])?></li>
 
-							<li> <?=Html::a('Contact Us', Url::to('@web/contacts.pdf'),['target'=>'_blank'])?></li>
+							<li> </li>
 												
 						</ul>
 					</div>
