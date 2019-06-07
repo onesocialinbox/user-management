@@ -75,6 +75,8 @@ use yii\helpers\Url;
 
 							<li> <?= Html::a('Login Instructions', Url::to('@web/instructions.pdf'),['target'=>'_blank']) ?></li>
 
+							<li> <?= Html::a('Affidavit Format', Url::to('@web/affidavitrules.pdf'),['target'=>'_blank']) ?></li>
+
 							<li><?= Html::a('Rules', Url::to('@web/Rules.pdf'),['target'=>'_blank'])?></li>
 
 							<li> </li>
