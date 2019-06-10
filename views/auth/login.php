@@ -28,8 +28,9 @@ use yii\helpers\Url;
 				
 				</div>
 			</div>
-			<h2 class="heading"><center>Online Enrollment Form</center></h2>
-			<h2 class="heading"><center><?=Html::a('Contact Us', Url::to('@web/contacts.pdf'),['target'=>'_blank'])?></center></h2>
+			<h2 class="heading"><center>Online Enrollment Form</center></h2><BR/>
+			<h6><right>Contact:044-25342739(Ext:17)</right></h6>
+			<!-- <h2 class="heading"><center></center></h2> -->
 			<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1 margin-top-header">
 				<h3 class="heading"><?= UserManagementModule::t('front', 'Login') ?></h3>
 				<?php $form = ActiveForm::begin([
@@ -79,7 +80,7 @@ use yii\helpers\Url;
 
 							<li><?= Html::a('Rules', Url::to('@web/Rules.pdf'),['target'=>'_blank'])?></li>
 
-							<li> </li>
+							<li><?=Html::a('Contact Us', Url::to('@web/contacts.pdf'),['target'=>'_blank'])?> </li>
 												
 						</ul>
 					</div>
