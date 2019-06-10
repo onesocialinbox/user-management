@@ -29,7 +29,7 @@ use yii\helpers\Url;
 				</div>
 			</div>
 			<h2 class="heading"><center>Online Enrollment Form</center></h2><BR/>
-			<h6><right>Contact:044-25342739(Ext:17)</right></h6>
+			<h4 class="heading"><left>CONTACT : 044-25342739 (Ext:17)</left></h4>
 			<!-- <h2 class="heading"><center></center></h2> -->
 			<div class="col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1 margin-top-header">
 				<h3 class="heading"><?= UserManagementModule::t('front', 'Login') ?></h3>
