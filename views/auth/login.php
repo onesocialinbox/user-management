@@ -26,14 +26,7 @@ use yii\helpers\Url;
 							) ?>
 				</div>
 
-				<div class="btn-center">
-					<?= GhostHtml::a(
-								UserManagementModule::t('front', "Offline Registration"),
-								['/enrollment-master1/create'],["class"=>"btn btn-lg btn-secondary  margin-top-bottom"]
-							) ?>
-				</div>
-				
-				
+								
 				</div>
 			</div>
 			<h3 class="heading"><?= UserManagementModule::t('front', 'Online Enrollment Form') ?></h3>
@@ -75,6 +68,11 @@ use yii\helpers\Url;
 							
 					<?= GhostHtml::a(
 						UserManagementModule::t('front', 'New User Registration'),
+						['/enrollment-master/create'],['class'=>'btn btn-lg btn-primary pull-left margin-top-bottom']
+					) ?>
+
+					<?= GhostHtml::a(
+						UserManagementModule::t('front', 'Offline Registration'),
 						['/enrollment-master/create'],['class'=>'btn btn-lg btn-primary pull-left margin-top-bottom']
 					) ?>
 
