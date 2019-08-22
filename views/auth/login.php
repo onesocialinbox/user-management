@@ -72,8 +72,8 @@ use yii\helpers\Url;
 					) ?>
 
 					<?= GhostHtml::a(
-						UserManagementModule::t('front', 'Offline Registration'),
-						['/enrollment/create'],['class'=>'btn btn-lg btn-primary pull-left margin-top-bottom']
+						UserManagementModule::t('front', 'Registration'),
+						['/offline/create'],['class'=>'btn btn-lg btn-primary pull-left margin-top-bottom']
 					) ?>
 
 					<div class="clear"></div>
