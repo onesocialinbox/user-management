@@ -71,15 +71,12 @@ use yii\helpers\Url;
 						['/enrollment-master/create'],['class'=>'btn btn-lg btn-primary pull-left margin-top-bottom']
 					) ?>
 
-					<?= GhostHtml::a(
-						UserManagementModule::t('front', 'Registration'),
-						['/offline/create'],['class'=>'btn btn-lg btn-primary pull-left margin-top-bottom']
-					) ?>
-
-					<div class="clear"></div>
+				<div class="clear"></div>
 					<?php ActiveForm::end() ?>
 					<div class="login-footer">	 
 						<ul class="recovery-links">
+						<li><?= GhostHtml::a(UserManagementModule::t('front', "Registeration"), ['/offline/create']) ?></li>
+
 							<li><?= GhostHtml::a(UserManagementModule::t('front', "Verify Otp"), ['/user/userotpverification']) ?></li>
 
 							<li> <?= Html::a('Login Instructions', Url::to('@web/instructions.pdf'),['target'=>'_blank']) ?></li>
