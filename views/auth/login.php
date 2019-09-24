@@ -75,7 +75,7 @@ use yii\helpers\Url;
 					<?php ActiveForm::end() ?>
 					<div class="login-footer">	 
 						<ul class="recovery-links">
-						<li><?= GhostHtml::a(UserManagementModule::t('front', "Registeration"), ['/offline/create']) ?></li>
+						
 
 							<li><?= GhostHtml::a(UserManagementModule::t('front', "Verify Otp"), ['/user/userotpverification']) ?></li>
 

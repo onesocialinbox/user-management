@@ -256,7 +256,7 @@ class User extends UserIdentity
 
 			['email','required'],
 			['email', 'email'],
-			['email', 'validateEmailConfirmedUnique'],
+			//['email', 'validateEmailConfirmedUnique'],
 
 			['bind_to_ip', 'validateBindToIp'],
 			['bind_to_ip', 'trim'],
@@ -275,21 +275,21 @@ class User extends UserIdentity
 	/**
 	 * Check that there is no such confirmed E-mail in the system
 	 */
-	public function validateEmailConfirmedUnique()
-	{
-		if ( $this->email )
-		{
-			$exists = User::findOne([
-				'email'           => $this->email,
-				'email_confirmed' => 1,
-			]);
+	// public function validateEmailConfirmedUnique()
+	// {
+	// 	if ( $this->email )
+	// 	{
+	// 		$exists = User::findOne([
+	// 			'email'           => $this->email,
+	// 			'email_confirmed' => 1,
+	// 		]);
 
-			if ( $exists AND $exists->id != $this->id )
-			{
-				$this->addError('email', UserManagementModule::t('front', 'This E-mail already exists'));
-			}
-		}
-	}
+	// 		if ( $exists AND $exists->id != $this->id )
+	// 		{
+	// 			$this->addError('email', UserManagementModule::t('front', 'This E-mail already exists'));
+	// 		}
+	// 	}
+	// }
 
 	/**
 	 * Validate bind_to_ip attr to be in correct format
