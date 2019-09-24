@@ -249,7 +249,7 @@ class User extends UserIdentity
 	{
 		return [
 			['username', 'required'],
-			['username', 'unique'],
+			//['username', 'unique'],
 			['username', 'trim'],
 
 			[['status', 'email_confirmed'], 'integer'],
